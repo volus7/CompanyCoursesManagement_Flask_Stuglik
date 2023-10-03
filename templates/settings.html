@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="wrapper">
+    <h1>Settings</h1>
+
+    <div id="accountNav" class="nav-settings">
+        <div id="settings-nav-root">
+            <ul class="nav">
+                <li class=""><a href="/account/settings/profile" title="Profile Information">Profile Information</a>
+                </li>
+                <li class="active"><a href="/account/settings/changepassword" title="Change Password">Change
+                        Password</a></li>
+                <li class=""><a href="/account/settings/homelocation" title="Home Location">Home Location</a></li>
+                <li class=""><a href="/account/settings/emailpreferences" title="Email Preferences">Email
+                        Preferences</a></li>
+                <li class=""><a href="/account/settings/account" title="Account">Account</a></li>
+                <li class=""><a href="/account/settings/preferences" title="Preferences">Preferences</a></li>
+                <li>
+                    <h2 class="section-title">Privacy</h2>
+                    <ul class="nav">
+                        <li class=""><a href="/account/settings/userprivacy" title="User Privacy">User Privacy</a></li>
+                        <li class=""><a href="/account/settings/authorizations"
+                                title="Authorizations">Authorizations</a></li>
+                        <li class=""><a href="/account/settings/cookies" title="Cookies">Cookies</a></li>
+                    </ul>
+                </li>
+            </ul><button id="navToggle" class="btn" type="button"></button>
+        </div>
+
+    </div>
+
+    <div class="settings-content">
+
+
+
+        <h2>Change Password</h2>
+        <h3>{{message}}</h3>
+
+        <form action="/account/settings/changepassword" id="ChangePswd" method="post"><label
+                for="CurrentPassword">Current password</label><input id="CurrentPassword" name="CurrentPassword"
+                type="password">
+            <div id="CurrentPasswordError" class="validation-error-wrapper"></div>
+            <label for="Password">New password</label><input id="Password" name="Password" type="password">
+
+            <label for="ConfirmPassword">Confirm new password</label><input id="ConfirmPassword" name="ConfirmPassword"
+                type="password">
+            <button type="submit" class="btn btn-primary" id="Update">Update</button>
+        </form>
+
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

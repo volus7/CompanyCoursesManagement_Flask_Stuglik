@@ -1,0 +1,617 @@
+.css-cgktk1 {
+    background-color: rgb(2, 135, 77);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    height: 80px;
+    width: 100%;
+}
+
+.css-cgktk1 nav {
+    -moz-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 1300px;
+    min-height: 80px;
+    overflow: visible;
+    padding: 0px 12px;
+    position: relative !important;
+    width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 nav {
+        margin: 0px auto;
+        padding: 0px 32px;
+    }
+}
+
+.css-cgktk1 .home-link {
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    display: block;
+    flex: 0 0 216px;
+    height: 40px;
+    overflow: hidden;
+    width: 216px;
+}
+
+@media screen and (min-width: 1055px) {
+    .css-cgktk1 .home-link {
+        flex: 0 0 216px;
+        width: 216px;
+    }
+}
+
+.css-cgktk1 .home-link:visited {
+    color: rgb(255, 255, 255);
+}
+
+.css-cgktk1 .home-link svg {
+    height: 100%;
+    width: 216px;
+}
+
+.css-cgktk1 li,
+.css-cgktk1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 ul {
+    -moz-box-align: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 .gc-menu {
+    font-size: 16px;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .gc-menu {
+        display: flex;
+    }
+}
+
+.css-cgktk1 li,
+.css-cgktk1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 ul>li {
+    position: relative;
+}
+
+.css-cgktk1 button {
+    border: 2px solid transparent;
+    font-family: "Noto Sans", sans-serif;
+    transition: border-color 0.2s ease 0s;
+}
+
+.css-cgktk1 .dropdown-toggle {
+    appearance: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.css-cgktk1 .gc-menu a,
+.css-cgktk1 .gc-menu button {
+    border: 2px solid transparent;
+}
+
+.css-cgktk1 .gc-menu .dropdown-toggle {
+    font-size: 16px;
+    margin-left: 32px;
+}
+
+.css-cgktk1 li,
+.css-cgktk1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 ul {
+    -moz-box-align: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 .user-menu {
+    display: none;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .user-menu {
+        display: flex;
+    }
+}
+
+.css-cgktk1 .message-center {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .message-center {
+        display: flex;
+    }
+}
+
+.message-center svg {
+    color: rgb(255, 255, 255);
+    height: 40px !important;
+    margin: 0px !important;
+    transition: color 0.3s ease 0s;
+    width: auto !important;
+}
+
+.css-cgktk1 li,
+.css-cgktk1 ul {
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 ul>li {
+    position: relative;
+}
+
+.css-cgktk1 .user-menu li+li {
+    margin-left: 24px;
+}
+
+.css-cgktk1 .player-profile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .player-profile {
+        display: block;
+    }
+}
+
+.player-profile img {
+    border-radius: 3px;
+    position: absolute;
+}
+
+.css-cgktk1 .player-profile img {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .player-profile img {
+        display: block;
+        position: static;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .css-cgktk1 .player-profile img {
+        position: absolute;
+    }
+}
+
+.player-profile span {
+    display: block;
+    margin-left: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+}
+
+@media screen and (min-width: 768px) {
+    .player-profile span {
+        width: auto;
+    }
+}
+
+.player-profile span.username {
+    font-size: 16px;
+}
+
+.css-cgktk1 .player-profile span {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .css-cgktk1 .player-profile span {
+        display: block;
+    }
+}
+
+.css-cgktk1 .toggle-user-menu {
+    -moz-box-align: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    display: none;
+    height: 40px;
+    -moz-box-pack: center;
+    justify-content: center;
+    transition: background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+    width: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .toggle-user-menu {
+        display: flex;
+    }
+}
+
+.css-cgktk1 .toggle-gc-mobile-nav {
+    background-color: transparent;
+    border: 0px;
+    height: 48px;
+    margin-left: auto;
+    padding: 0px;
+    width: 48px;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .toggle-gc-mobile-nav {
+        display: none;
+    }
+}
+
+.player-profile {
+    border: 2px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    color: rgb(255, 255, 255) !important;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    text-decoration-color: currentcolor;
+    padding: 2px;
+    transition: border-color 0.2s ease 0s;
+}
+
+.player-profile {
+    border-color: transparent;
+    color: rgb(232, 230, 227) !important;
+    text-decoration-color: currentcolor;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    outline: 0;
+    outline-color: currentcolor;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    outline-color: currentcolor;
+}
+
+.css-cgktk1 .player-profile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .css-cgktk1 .player-profile {
+        display: block;
+    }
+}
+
+.player-profile span {
+    display: block;
+    margin-left: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+}
+
+@media screen and (min-width: 768px) {
+    .player-profile span {
+        width: auto;
+    }
+}
+
+.player-profile span.username {
+    font-size: 16px;
+}
+
+.css-cgktk1 .player-profile span {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .css-cgktk1 .player-profile span {
+        display: block;
+    }
+}
+
+.css-cgktk1 ul {
+    -moz-box-align: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    list-style-image: none;
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.css-cgktk1 ul {
+    list-style-image: none;
+}
+
+.css-cgktk1 .dropdown-menu {
+    background-color: rgb(255, 255, 255);
+    border-width: 0px 1px 1px;
+    border-style: none solid solid;
+    border-color: currentcolor rgb(228, 228, 228) rgb(228, 228, 228);
+    border-image: none;
+    display: block;
+    left: 0px;
+    margin-left: 50%;
+    padding: 12px 0px;
+    position: absolute;
+    top: 51px;
+    transform: translateX(-16px);
+    z-index: 100;
+
+}
+
+
+.css-cgktk1 .dropdown-menu a {
+    -moz-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(74, 74, 74);
+    display: flex;
+    padding: 8px 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100% !important;
+}
+
+
+.css-cgktk1 .dropdown-menu .has-icon a {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    padding: 16px 24px;
+}
+
+.css-cgktk1 ul>li {
+    position: relative;
+}
+
+.css-cgktk1 .dropdown-menu a svg {
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.css-cgktk1 .gc-menu a,
+.css-cgktk1 .gc-menu button {
+    border: 2px solid transparent;
+}
+
+
+
+
+.css-4ef8mu {
+    background-color: rgb(95, 69, 42);
+    color: rgb(248, 237, 212);
+    font-size: 14px;
+    line-height: 1.6em;
+    position: relative;
+}
+
+.css-4ef8mu nav {
+    background-color: transparent !important;
+    height: auto !important;
+    margin: 0px 40px;
+    max-width: 1030px;
+    padding: 32px 0px;
+    padding-top: 32px;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .css-4ef8mu nav {
+        align-items: flex-start;
+        display: flex;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        margin: 0px auto;
+        padding-top: 60px;
+        width: 90%;
+    }
+}
+
+.css-4ef8mu .language-selector {
+    margin: 0px 40px 32px;
+    margin-right: 40px;
+    margin-left: 40px;
+    max-width: 1030px;
+}
+
+@media screen and (min-width: 768px) {
+    .css-4ef8mu .language-selector {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
+.css-4ef8mu section {
+    -moz-box-align: center;
+    align-items: center;
+    background-color: rgb(131, 96, 63);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    -moz-box-pack: center;
+    justify-content: center;
+    padding: 24px 5% 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.css-4ef8mu nav dl {
+    margin: 36px 0px;
+    padding: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .css-4ef8mu nav dl {
+        margin: 0px;
+    }
+}
+
+.css-4ef8mu nav dt {
+    font-size: 18px;
+}
+
+.css-4ef8mu .language-selector button {
+    -moz-box-align: center;
+    align-items: center;
+    background-color: rgb(115, 85, 54);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: rgb(248, 237, 212);
+    display: flex;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.css-4ef8mu .language-selector .icon-language {
+    height: 24px;
+    margin-right: 8px;
+    width: 24px;
+}
+
+.css-4ef8mu .language-selector .icon-caret {
+    height: 12px;
+    margin-left: 8px;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease 0s;
+    width: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.css-4ef8mu section span {
+    margin-bottom: 16px;
+}
+
+.css-4ef8mu section .social {
+    -moz-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    list-style: none;
+    margin: 0px 0px 16px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .css-4ef8mu section .social {
+        margin-left: 24px;
+    }
+}
+
+
+.css-4ef8mu section .social li {
+    height: 24px;
+    width: 24px;
+}
+
+.css-4ef8mu section .social a {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    top: 0px;
+    transition: top 0.35s ease 0s;
+}
+
+.css-4ef8mu section .social svg {
+    height: 100%;
+    width: 100%;
+}
+
+.css-4ef8mu nav dd {
+    margin: 16px 0px 0px;
+}
+
+.css-4ef8mu a {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: rgb(248, 237, 212);
+    margin-left: -8px;
+    padding: 2px 6px;
+    position: relative;
+    text-decoration: none;
+}
+
+.css-n4gna3 button {
+    font-size: 16px;
+}
+
+#gc-header form button,
+#gc-mobile-nav form button {
+    background-color: transparent;
+    border: 0px;
+    color: rgb(74, 74, 74);
+    cursor: pointer;
+    display: block;
+    padding: 8px 24px;
+    text-align: left;
+    width: 100%;
+}
+
+.css-cgktk1 .dropdown-menu.menu-user {
+    font-size: 16px;
+    left: auto;
+    right: -27px;
+    top: 58px;
+}
+
+.css-cgktk1 .user-menu .dropdown-menu li {
+    margin-left: 0px;
+}
+
+.css-cgktk1 .dropdown-menu a {
+    -moz-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(74, 74, 74);
+    display: flex;
+    padding: 8px 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100% !important;
+}
