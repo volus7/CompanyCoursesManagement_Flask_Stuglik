@@ -1,7 +1,7 @@
 import hashlib
 import sqlite3
 
-from flask import Flask, request, render_template, redirect, session
+from flask import Flask, request, render_template, redirect, session, abort
 from flask_session import Session
 
 app = Flask(__name__)
@@ -23,6 +23,9 @@ def login():
         password_hash, = result
         if hashlib.md5(request.form.get('password').encode()).hexdigest() == password_hash:
             session["username"] = request.form.get("username")
+            cursor.execute("SELECT role, name FROM users INNER JOIN teams on team_id=teams.id WHERE username=?",
+                           [session["username"]])
+            session["role"], session["team_name"] = cursor.fetchone()
             return redirect("/")
     return render_template("login.html")
 
@@ -31,13 +34,37 @@ def login():
 def index():
     if not session.get("username"):
         return redirect("/login")
-    cursor.execute("SELECT role, name FROM users INNER JOIN teams on team_id=teams.id WHERE username=?", [session["username"]])
-    role, team_name = cursor.fetchone()
-    if role == 'manager':
+
+    if session.get("role") == 'manager':
         cursor.execute("SELECT role, name FROM users INNER JOIN teams on team_id=teams.id WHERE username=?",
                        [session["username"]])
 
-    return render_template('index.html', username=session["username"], role=role, team_name=team_name)
+    return render_template('index.html', username=session["username"], role=session.get("role"),
+                           team_name=session.get("team_name"))
+
+
+@app.route('/manageUsers')
+def manage_users():
+    if not session.get("username"):
+        return redirect("/login")
+    if session.get("role") != 'manager':
+        abort(403)
+
+    cursor.execute("SELECT username FROM users WHERE username!='admin'")
+    users = cursor.fetchall()
+    return render_template('manageUsers.html', users=users)
+
+
+@app.route('/manageManagers')
+def manege_managers():
+    if not session.get("username"):
+        return redirect("/login")
+    if session.get("username") != 'admin':
+        abort(403)
+
+    cursor.execute("SELECT username FROM users WHERE role='manager'")
+    managers = cursor.fetchall()
+    return render_template('manageManagers.html', managers=managers)
 
 
 if __name__ == '__main__':

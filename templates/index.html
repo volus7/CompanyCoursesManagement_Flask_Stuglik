@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>
-    {{ role}}
-    {{ team_name }}
-</p>
+
+    {% if role=='admin' %}
+    <p>Jesteś administratorem.</p>
+        <a href="/manageManagers">zarządzaj managerami</a>
+        <a href="/manageUsers">zarządzaj pracownikami</a>
+    {% elif role == 'manager' %}
+    <p>Jesteś managerem.</p>
+        <a href="/manageUsers">zarządzaj pracownikami</a>
+    {% else %}
+    <p>Jesteś pracownikiem.</p>
+    {% endif %}
+
+ <p>Należysz do zespołu {{ team_name }}.</p>
 {% endblock %}
