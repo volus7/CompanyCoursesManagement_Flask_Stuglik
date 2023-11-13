@@ -68,4 +68,4 @@ def manege_managers():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

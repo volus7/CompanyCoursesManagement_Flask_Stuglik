@@ -1,6 +1,17 @@
-{% extends 'base.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pl-PL">
 
+<head id="ctl00_Head1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        {{location_title}}
+    </title>
+
+</head>
+
+<body class="CacheDetailsPage">
     {% if role=='admin' %}
     <p>Jesteś administratorem.</p>
         <a href="/manageManagers">zarządzaj managerami</a>
@@ -11,6 +22,6 @@
     {% else %}
     <p>Jesteś pracownikiem.</p>
     {% endif %}
+</body>
 
- <p>Należysz do zespołu {{ team_name }}.</p>
-{% endblock %}
+</html>
