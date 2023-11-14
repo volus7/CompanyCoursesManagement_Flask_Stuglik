@@ -1,0 +1,6 @@
+Background: #3b2d4c
+White: #ffffff
+Light: #af8ae2
+Dark: #191420
+
+Between light and Background: #584472
