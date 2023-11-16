@@ -5,23 +5,54 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/static/style/style.css">
     <title>
-        {{location_title}}
+        {% if role=='admin' %}
+        Kapsel - Admin
+        {% elif role == 'manager'%}
+        Kapsel - Manager
+        {% else %}
+        Kapsel - Pracownik
+        {% endif %}
     </title>
 
 </head>
 
 <body class="CacheDetailsPage">
+    <div id="nav">
+        <img src="../static/icon/Logo.png" alt="Logo" id="logo">
+        <nav>
+            <ul>
+                {% if role=='admin' %}
+                <li><a href="/">Home</a></li>
+                <li>
+                    <a href="#" id="manage">Zarządzaj</a>
+                    <ul>
+                        <li><a href="#">Menagerami</a></li>
+                        <li><a href="#">Pracownikami</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"></a></li>
+                {% elif role == 'manager'%}
+                
+                {% else %}
+                
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
     {% if role=='admin' %}
-    <p>Jesteś administratorem.</p>
+        <p>Jesteś administratorem.</p>
         <a href="/manageManagers">zarządzaj managerami</a>
         <a href="/manageUsers">zarządzaj pracownikami</a>
     {% elif role == 'manager' %}
-    <p>Jesteś managerem.</p>
+        <p>Jesteś managerem.</p>
         <a href="/manageUsers">zarządzaj pracownikami</a>
     {% else %}
-    <p>Jesteś pracownikiem.</p>
+        <p>Jesteś pracownikiem.</p>
     {% endif %}
+
+    <script href="/static/javascript/script.js"></script>
 </body>
 
 </html>
