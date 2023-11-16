@@ -20,34 +20,30 @@
 
 <body class="CacheDetailsPage">
     <div id="nav">
-        <img src="../static/icon/Logo.png" alt="Logo" id="logo">
+        <a href="/" id="logo"><div id="logoDiv"></div></a>
         <nav>
             <ul>
                 {% if role=='admin' %}
-                <li><a href="/">Home</a></li>
-                <li>
-                    <a href="#" id="manage">Zarządzaj</a>
-                    <ul>
-                        <li><a href="#">Menagerami</a></li>
-                        <li><a href="#">Pracownikami</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"></a></li>
+                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
+                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
+                <li class="navBtn"><a href="">Edytuj Kursy</a></li>
+                <li class="navBtn"><a href="">Kontakt</a></li>
                 {% elif role == 'manager'%}
-                
+                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
+                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
+                <li class="navBtn"><a href="">Kontakt</a></li>
                 {% else %}
-                
+                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
+                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
+                <li class="navBtn"><a href="">Kontakt</a></li>
                 {% endif %}
             </ul>
         </nav>
     </div>
     {% if role=='admin' %}
         <p>Jesteś administratorem.</p>
-        <a href="/manageManagers">zarządzaj managerami</a>
-        <a href="/manageUsers">zarządzaj pracownikami</a>
     {% elif role == 'manager' %}
         <p>Jesteś managerem.</p>
-        <a href="/manageUsers">zarządzaj pracownikami</a>
     {% else %}
         <p>Jesteś pracownikiem.</p>
     {% endif %}
