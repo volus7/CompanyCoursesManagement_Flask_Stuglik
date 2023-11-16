@@ -37,6 +37,9 @@
                 <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
                 <li class="navBtn"><a href="">Kontakt</a></li>
                 {% endif %}
+                <li id="logoutLi">
+                    
+                </li>
             </ul>
         </nav>
     </div>
@@ -47,8 +50,10 @@
     {% else %}
         <p>Jesteś pracownikiem.</p>
     {% endif %}
-
-    <script href="/static/javascript/script.js"></script>
+    <h1>Welcome, {{ username }}!</h1>
+    <a href="{{ url_for('logout') }}" id="urmom">Logout</a>
+    <div id="timeout"></div>
+    <script src="/static/javascript/script.js"></script>
 </body>
 
 </html>
