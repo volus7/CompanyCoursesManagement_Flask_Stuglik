@@ -10,12 +10,17 @@
 </head>
 
 <body class="theme">
-    <dialog>
+    {% if message ==  "" %}
+    <dialog open>
+        <p>popo</p>
         <div id="closeBtn">
             <span id="closeSpan45"></span>
             <span id="closeSpanNeg45"></span>
+            <button autofocus id="closeDialogBtn">X</button>
+            <p>This modal dialog has a groovy backdrop!</p>
         </div>
     </dialog>
+    {% endif %}
     <h1 class="absolute">
         <span>There</span>
         <span>are</span>
@@ -59,8 +64,6 @@
             </div>
         </div>
     </div>
-
-    <script href="/static/javascript/script.js"></script>
 </body>
 
 </html>
