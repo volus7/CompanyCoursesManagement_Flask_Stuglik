@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/icon/small.ico">
+
     <title>
         {% if role=='admin' %}
         Kapsel - Admin
@@ -24,35 +26,30 @@
         <nav>
             <ul>
                 {% if role=='admin' %}
-                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
+                <li class="navBtn"><a href="">Zarządzaj Menagerami</a></li>
                 <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
                 <li class="navBtn"><a href="">Edytuj Kursy</a></li>
-                <li class="navBtn"><a href="">Kontakt</a></li>
                 {% elif role == 'manager'%}
-                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
                 <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
-                <li class="navBtn"><a href="">Kontakt</a></li>
                 {% else %}
-                <li class="navBtn"><a href="" id="manage">Zarządzaj Menagerami</a></li>
-                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
-                <li class="navBtn"><a href="">Kontakt</a></li>
+                <li class="navBtn"><a href="">Kursy</a></li>
                 {% endif %}
+                <li class="navBtn"><a href="">Kontakt</a></li>
                 <li id="logoutLi">
-                    
+                    <div class="horizontal">
+                        <div id="logoutIcon"></div>
+                        <div class="vertical">
+                            <div id="timeout"></div>
+                            <a href="{{ url_for('logout') }}" id="logoutPageBtn">Logout</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
     </div>
-    {% if role=='admin' %}
-        <p>Jesteś administratorem.</p>
-    {% elif role == 'manager' %}
-        <p>Jesteś managerem.</p>
-    {% else %}
-        <p>Jesteś pracownikiem.</p>
-    {% endif %}
-    <h1>Welcome, {{ username }}!</h1>
-    <a href="{{ url_for('logout') }}" id="logoutPageBtn">Logout</a>
-    <div id="timeout"></div>
+    <div id="content">
+        <h1>Jesteś, {{ username }}!</h1>
+    </div>
     <script src="/static/javascript/script.js"></script>
 </body>
 
