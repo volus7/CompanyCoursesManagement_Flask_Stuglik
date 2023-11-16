@@ -16,7 +16,7 @@ html, body{
     justify-content: center;
 }
 
-/* ---------- KLASY OGOLNE ---------- */
+/* ______________ KLASY OGOLNE ______________ */
 
 .m-5{
     margin-top: 5px;
@@ -61,7 +61,7 @@ html, body{
 
 
 
-/* ------------- STYLOWANIE FORMA ------------- */
+/* ______________ STYLOWANIE FORMA ______________ */
 
 #formDiv{
     display: flex;
@@ -105,7 +105,7 @@ form{
     border-radius: 5px;
     font-size: 14px;
     border: none;
-    font-family: 'Helvetica', sans-serif; /* Dodaj pojedyncze lub podwójne cudzysłowy do nazwy czcionki */
+    font-family: 'Helvetica', sans-serif;
     text-align: center;
 }
 
@@ -171,7 +171,7 @@ button {
 
 
 
-  /* ______________________________________________________________ */
+  /* ______________ TEXT ON LEFT SIDE ______________ */
 
 
   h1 {
