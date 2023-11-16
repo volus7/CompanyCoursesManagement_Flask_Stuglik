@@ -3,10 +3,13 @@ import sqlite3
 
 from flask import Flask, request, render_template, redirect, session, abort
 from flask_session import Session
+from datetime import timedelta
 
 app = Flask(__name__)
-app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.config['SECRET_KEY'] = '10764a32f083da83643be57e1458adfd'
+app.config['SESSION_PERMANENT'] = True
+
 Session(app)
 
 connection = sqlite3.connect("data/users.sqlite", check_same_thread=False)
@@ -16,7 +19,8 @@ cursor = connection.cursor()
 @app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
-        cursor.execute("SELECT password FROM users WHERE username=?", [request.form.get('username')])
+        username = request.form.get('username')
+        cursor.execute("SELECT password FROM users WHERE username=?", [username])
         result = cursor.fetchone()
         if not result:
             return redirect('/login')
@@ -26,8 +30,11 @@ def login():
             cursor.execute("SELECT role, name FROM users INNER JOIN teams on team_id=teams.id WHERE username=?",
                            [session["username"]])
             session["role"], session["team_name"] = cursor.fetchone()
+            
+            session['username'] = username
             return redirect("/")
     return render_template("login.html")
+
 
 
 @app.route('/')
