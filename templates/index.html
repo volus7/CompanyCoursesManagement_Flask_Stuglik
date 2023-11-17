@@ -24,9 +24,25 @@
 <body class="CacheDetailsPage">
     {% include 'navs/navbar.html' %}
     <div id="content">
-        <h1>Jesteś, {{ username }}!</h1>
+        {% if role=='admin' %}
+        <h1>Witaj Administratorze.</h1>
+
+        {% elif role == 'manager'%}
+        <h1>Witaj Managerze.</h1>
+        
+        {% else %}
+        <h1>Witaj Pracowniku.</h1>
+
+        {% endif %}
+
+
     </div>
-    <script src="/static/javascript/script.js"></script>
+    <script src="/static/javascript/logoutTimer.js"></script>
+    <script>
+        function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+      </script>
 </body>
 
 </html>
