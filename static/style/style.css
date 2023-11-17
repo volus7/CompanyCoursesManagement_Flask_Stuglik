@@ -69,7 +69,7 @@ nav > ul{
     gap: 5px;
 }
 #logoutIcon{
-    background-image: url(/static/icon/power.ico);
+    background-image: url(/static/icon/power.png);
     background-size: 100% 100%;
     width: 25px;
     height: 25px;
