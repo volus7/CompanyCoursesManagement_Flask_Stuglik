@@ -22,32 +22,7 @@
 </head>
 
 <body class="CacheDetailsPage">
-    <div id="nav">
-        <a href="/" id="logo"><div id="logoDiv"></div></a>
-        <nav>
-            <ul>
-                {% if role=='admin' %}
-                <li class="navBtn"><a href="">Zarządzaj Menagerami</a></li>
-                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
-                <li class="navBtn"><a href="">Edytuj Kursy</a></li>
-                {% elif role == 'manager'%}
-                <li class="navBtn"><a href="">Zarządzaj Pracownikami</a></li>
-                {% else %}
-                <li class="navBtn"><a href="">Kursy</a></li>
-                {% endif %}
-                <li class="navBtn"><a href="">Kontakt</a></li>
-                <li id="logoutLi">
-                    <div class="horizontal">
-                        <div id="logoutIcon"></div>
-                        <div class="vertical">
-                            <div id="timeout"></div>
-                            <a href="{{ url_for('logout') }}" id="logoutPageBtn">Logout</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    {% include 'navs/navbar.html' %}
     <div id="content">
         <h1>Jesteś, {{ username }}!</h1>
     </div>
