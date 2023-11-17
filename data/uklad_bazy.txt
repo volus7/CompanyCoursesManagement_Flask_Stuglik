@@ -1,0 +1,26 @@
+TEAMS:
+
+ID NAME MANAGER_ID
+
+USER:
+
+ID USERNAME ROLE PASSWORD TEAM_ID
+
+
+================================================================================
+
+
+
+TEAMS:
+
+ID MANAGER_ID WORKER_ID
+
+USER prop:
+
+ID USERNAME PASSWORD ROLE MANAGER_ID STATUS 
+
+MANAGER_ID - przypisanie do managera od ID Managera
+STATUS:
+    0 - nie widoczmny na listach (manager / admin)
+    1 - przypisany do managera
+    2 - wolny
