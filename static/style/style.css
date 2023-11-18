@@ -9,9 +9,10 @@
 html, body{
     font-family: Helvetica, sans-serif;
     height: 100%;
-    /* background-image: linear-gradient(to bottom, #ede6f3, var(--secbg)); */
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
+    background-image: linear-gradient(rgba(59,45,76,0.9), rgba(59,45,76,0.9)), url(../icon/new-york-1745089_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 h1{
     margin-top: 20px;
@@ -34,7 +35,7 @@ a{
     padding-top: 50px;
     width: 100vw;
     height: 100vh;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
     transition-duration: .3s;
 }
 #plan-txt{

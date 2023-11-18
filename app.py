@@ -40,7 +40,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop("username", None)
-    return redirect("/login")
+    return render_template("logout.html")
 
 
 @app.route('/')
