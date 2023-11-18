@@ -34,7 +34,7 @@ nav > ul{
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    background-color: var(--bg);
+    background-color: var(--secbg);
 }
 
 #timeout {

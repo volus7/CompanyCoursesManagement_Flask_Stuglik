@@ -22,19 +22,46 @@
 </head>
 
 <body class="CacheDetailsPage">
-    {% include 'navs/navbar.html' %}
+    {% include 'navbar.html' %}
     <div id="content">
+        <div id="swithch-lights">
+            <input type="checkbox" id="checkboxInput">
+            <label for="checkboxInput" class="toggleSwitch"></label>
+        </div>
         {% if role=='admin' %}
-        <h1>Witaj Administratorze.</h1>
-
+        <h1 class="light">Witaj Administratorze.</h1>
         {% elif role == 'manager'%}
-        <h1>Witaj Managerze.</h1>
-        
+        <h1 class="light">Witaj Managerze.</h1>
         {% else %}
-        <h1>Witaj Pracowniku.</h1>
-
+        <h1 class="light">Witaj Pracowniku.</h1>
         {% endif %}
 
+        <div id="plan-txt">
+            <br>
+            <h2>Funkcjonalność aplikacji:</h2>
+            <br>
+            <p><b>Logowanie:</b></p>
+            <p>Wprowadzenie Loginu i podanie hasła do przypisanego loginu. <br> W zależności od podanego loginu strona przechodzi do jednej z trzech funkcjonalności:</p>
+            <ol>
+                <li>
+                    <h3>Administrator (Właściciel / CEO)</h3>
+                    <p>Osoba logująca się i posiadająca rolę administratora, może dodawać i usuwać konta <br>Managerów, może dodawać i usuwać konta użytkowników (pracowników). <br>Może dodawać i edytować kursy posiadając pełny dostęp do strony.</p>
+                </li>
+                <li>
+                    <h3>Moderator (Manager oddziału / Dyrektor zespołu)</h3>
+                    <p>Osoba logująca się i posiadająca rolę moderatora, może dodawać i usuwać konta <br>użytkowników (pracowników) przypisanych do niego jako podwładnych. <br> Może edytować dostęp do kursów dla danego pracownika
+                    </p>
+                </li>
+                <li>
+                    <h3>Uzytkownik (Pracownik)</h3>
+                    <p>
+                        Osoba logująca się posiada role użytkownika, posiada dostęp do przypisanych mu 	przez managera kursów. <br>Może wystawiać opinie na temat kursu oceniając go gwiazdkami <br>
+                        oraz strona automatycznie zapisuje jego postęp w danym kursie <br>aby ułatwić jego późniejszy powrót i umożliwić kontynuację bez potrzeby ponawiania. 
+                    </p>
+                </li>
+            </ol>
+        </div>
+        
 
     </div>
     <script src="/static/javascript/logoutTimer.js"></script>
@@ -43,6 +70,7 @@
         setTimeout("preventBack()", 0);
         window.onunload=function(){null};
       </script>
+      <script src="/static/javascript/lightToggleSwitch.js"></script>
 </body>
 
 </html>
