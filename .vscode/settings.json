@@ -1,6 +1,7 @@
 {
     "html.validate.scripts": false,
     "files.associations": {
-        "**/templates/*.html": "html"
+        "**/templates/*.html": "html",
+        "**/templates/contents/*.html": "html"
     }
 }
