@@ -25,17 +25,12 @@
     {% include 'navbar.html' %}
     <div id="content">
         {% if role == 'admin' or role == 'manager' %}
-        {% include 'contents/adminOrManagerMain.html' %}
+            {% include 'contents/adminOrManagerMain.html' %}
         {% endif %}
 
 
     </div>
     <script src="/static/javascript/logoutTimer.js"></script>
-    <script>
-        function preventBack(){window.history.forward();}
-        setTimeout("preventBack()", 0);
-        window.onunload=function(){null};
-      </script>
       <script src="/static/javascript/lightToggleSwitch.js"></script>
 </body>
 
